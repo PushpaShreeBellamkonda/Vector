@@ -1,0 +1,6 @@
+t=(1,5,8,2,1)
+print(t.index(8))
+print(sorted(t))
+print(t[:3])
+print(t[2:5])
+print(t[::-1])
