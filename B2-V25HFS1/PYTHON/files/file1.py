@@ -1,0 +1,5 @@
+f1=open("/Users/vector/Desktop/Vector/B2-V25HFS1/PYTHON/files/data.txt","r")
+f2=open("/Users/vector/Desktop/Vector/B2-V25HFS1/PYTHON/files/output1.txt","w")
+f2.write(f1.read())
+f1.close()
+f2.close()
