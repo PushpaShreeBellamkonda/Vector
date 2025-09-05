@@ -1,0 +1,6 @@
+101 Pushpa cse 98 87 89 88
+102 Shree ece 98 98 87 80
+103 Adi ece 78 89 90 96
+104 Anika civil 89 78 90 97
+105 Siddu ce 98 79 88 99
+106 Riddima cse 98 99 77 80
