@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 2</title>
+</head>
+
+<body>
+    <input type="radio" value="male" name="gen" checked />Male
+    <input type="radio" value="female" name="gen" checked />Female
+
+    <h4>Select Your Location</h4>
+    <input type="radio" value="hyd" name="lc" />HYD
+    <input type="radio" value="bng" name="lc" />BNGLR
+    <input type="radio" value="chn" name="lc" />CHEN <br /><br />
+
+    <input type="checkbox" value="tel" checked />Telugu
+    <input type="checkbox" value="hin" />Hindi
+    <input type="checkbox" value="eng" />English <br /><br />
+
+    <select>
+        <option value=" " selected disabled>--select--</option>
+        <option value="1">opt1</option>
+        <option value="2">opt2</option>
+        <option value="3">opt3</option>
+        <option value="4">opt4</option>
+    </select> <br /><br />
+
+    <select multiple>
+        <option value=" " selected disabled>--select--</option>
+        <option value="1">opt1</option>
+        <option value="2">opt2</option>
+        <option value="3">opt3</option>
+        <option value="4">opt4</option>
+    </select><br /><br />
+
+    <!--Searchable dropdown list-->                                                                                                                                                                                                                                                                            
+    <input list="data"/>
+    <datalist id="data">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+    </datalist><br /><br />
+    <!--grouping options in deropdownlist-->
+    <select>
+        <option value=" " selected disabled>--select--</option>
+        <optgroup label="CSE:">
+            <option value="1">DBMS</option>
+            <option value="1">DS</option>
+            <option value="1">DSP</option>
+            <option value="1">DM</option>
+        </optgroup>
+        <optgroup label="ECE:">
+            <option value="1">SS</option>
+            <option value="1">ES</option>
+            <option value="1">DLD</option>
+            <option value="1">VLSI</option>
+        </optgroup>
+    </select><br /><br />
+    <!--Text Area== to read multiple line text-->
+    <textarea rows="5" cols="25"></textarea>
+    <br /><br />
+
+    <!--Buttons-->
+    <form action="https://www.google.com">
+        <input type="text" name="q"/>
+        <input type="submit" value="Search"/>
+        <input type="reset" value="Reset"/>
+        <input type="button" value="Click" onclick='alert("hello")'/>
+        <br /><br />
+
+               <!--OR-->
+        <form action="https://www.google.com">
+        <input type="text" name="q"/>
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick='alert("hello")'>Click</button> 
+        <br /><br />
+
+        <!--Fieldset-->
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <input type="text" placeholder="name"/><br/>
+            <input type="date"/>
+        </fieldset>
+
+    </form>
+</body>
+</html>

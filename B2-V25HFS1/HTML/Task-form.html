@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-form</title>
+</head>
+
+<body>
+    <form action="">
+    <fieldset>
+        <legend><b>Personal details:</b></legend>
+        <label>Name:<input type="text" placeholder="enter name"></label><br /><br />
+        <label>DOB: <input type="date"></label><br /><br />
+        <label>Phno:<input type="text" placeholder="enter phno"></label><br /><br />
+        <label>E-mail:<input type="text" placeholder="enter e-mail"></label><br /><br />
+        <label>Gender:</label>
+        <input type="radio" value="Male" name="gen">Male
+        <input type="radio" value="Feale" name="gen">Female<br /><br />
+        <label>Languages Known:</label>
+        <input type="checkbox" value="Tel" name="lan">Telugu
+        <input type="checkbox" value="Hin" name="lan">Hindi
+        <input type="checkbox" value="eng" name="lan">English<br /><br />
+        <label>Address:<textarea rows="5" cols="50"></textarea></label><br /><br />
+        <label>Upload image:<input type="file"></label><br /><br />
+    </fieldset>
+    <fieldset>
+        <legend><b>Educational details:</b></legend>
+        <table border="1">
+            <tr>
+                <td>SSC</td>
+                <td>---</td>
+                <td>
+                    <select>
+                        <option value="" selected disabled>School name</option>
+                        <option value="1">Alpha</option>
+                        <option value="2">Vasavi</option>
+                        <option value="3">Gitanjali</option>
+                        <option value="4">HPS</option>
+                    </select>
+                </td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Inter</td>
+                <td>MPC</td>
+                <td>
+                    <select>
+                        <option value="" selected disabled>College name</option>
+                        <option value="1">Narayana</option>
+                        <option value="2">Sri Chaitanya</option>
+                        <option value="3">Bhasyam</option>
+                        <option value="4">kits</option>
+                    </select>
+                </td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>Btech</td>
+                <td>CSE</td>
+                <td>
+                    <select>
+                        <option value="" selected disabled>University name</option>
+                        <option value="1">RGUKT</option>
+                        <option value="2">GITAM</option>
+                        <option value="3">VIT</option>
+                        <option value="4">SRM</option>
+                    </select>
+                </td>
+                <td>92</td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend><b>Hobbies:</b></legend>
+        <label>Fgame:</label>
+        <select>
+            <option value="1">Cricket</option>
+            <option value="2">Football</option>
+            <option value="3">Kabaddi</option>
+            <option value="4">Shettle</option>
+        </select><br/><br/>
+        <label>Fmovie:</label>
+        <select>
+            <option value="1">Spiderman</option>
+            <option value="2">Iron man</option>
+            <option value="3">Dr.Strange</option>
+            <option value="4">Thor</option>
+        </select><br/><br/>
+        <label> Lnumber:<input type="text"></label><br/><br/>
+        <label>Fcolor:<input type="color"></label>
+    </fieldset><br/><br/>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>
