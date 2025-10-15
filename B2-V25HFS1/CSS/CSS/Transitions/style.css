@@ -1,0 +1,49 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /* 3 ) transition-duration :2s means 1) and 2) will occur after 2 seconds  */
+    transition-property: all;
+    transition-duration: 2s;
+    /* all the 1) and 2) will happen in 5 steps */
+    transition-timing-function: steps(5);
+    /* transitions delays for 2 sec */
+    /* transition-delay: 2s; */
+    /* simple to write all 
+    transition: all 2s ease-in 1s;
+     */
+    /* rotate to 45 degrees */
+     transform: rotate(45deg);
+     /* scale(2) means the size becomes 2 times */
+     transform: scale(2);
+     /* in x-axis its size is same in y-axis its size is 2 times */
+     /* transform: scale(1,2); */
+}
+
+
+
+/* 1 ) when we hover on the div its color changes to red and font color changes to yellow */
+div:hover{
+    background-color: red;
+    color: yellow;
+    font-size: 20px;
+    /* on hover in x-axis its size is same in y-axis its size is 2 times  */
+    /* transform: scale(1,2); */
+
+    /* it will move 50px right on hover */
+    transform: translateX(100px);
+    /* skew for 50 degree */
+    transform: skew(50deg);
+}
+
+
+/*  2 ) same as hover but active means to double click and hold */
+div:active{
+    background-color: pink;
+    color: purple;
+}
+

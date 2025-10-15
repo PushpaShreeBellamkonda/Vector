@@ -1,0 +1,28 @@
+div{
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+}
+
+
+/* it means when the screen is responsive to 600px the div color changes from green to red */
+@media (width : 600px){
+    div{
+        background-color: red;
+    }
+}
+
+
+/* it means when the screen is responsive to greater than 600px the div color changes from green to violet */
+@media (min-width: 600px){
+    div{
+        background-color: green;
+    }
+}
+
+/* * it means when the screen is responsive between 200 to 300 the div color changes to blue */ 
+@media (min-width: 200px) and (min-width: 300px){
+    div{
+        background-color: blue;
+    }
+}

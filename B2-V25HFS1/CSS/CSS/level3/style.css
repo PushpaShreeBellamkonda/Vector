@@ -1,0 +1,24 @@
+#box1{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    /* background pic for a div */
+    background-image: url(pushu.jpg);
+    background-size: cover;
+}
+
+#box2{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    background-image: url(pushu.jpg);
+    background-size: contain;
+}
+
+div{
+    height: 100px;;
+    width: 100px;
+    background-image: url(pushu.jpg);
+    background-size: cover;
+    position: fixed;
+}
