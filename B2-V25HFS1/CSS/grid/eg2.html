@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-2</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .page{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 0.5fr;
+            grid-template-rows: 10vh 1fr 1fr 5vh;
+            grid-template-areas: "nav nav nav" "side main as1" "side main as2"  "footer footer footer";                      
+        }
+        nav{
+            background-color: violet;
+            grid-area: nav;
+        }
+        .smenu{
+            background-color: indigo;
+            grid-area: side;
+        }
+        .main{
+            background-color: blue;
+            grid-area: main;
+        }
+        .as1{
+            background-color: green;
+            grid-area: as1;
+        }
+        .as2{
+            background-color: rgb(50, 22, 208);
+            grid-area: as2;
+        }
+        footer{
+            background-color: orange;
+            grid-area:footer
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav></nav>
+        <div class="smenu"></div>
+        <div class="main"></div>
+        <div class="main"></div>
+        <div class="as1"></div>
+        <div class="as2"></div>
+        <footer></footer>
+    </div>
+</body>
+</html>
