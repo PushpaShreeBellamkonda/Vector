@@ -1,0 +1,79 @@
+<!-- 
+Task 1: Greeting Function
+Task 2: Sum Function
+Task 3: Square Function
+Task 4: Average Function
+Task 5: Temperature Converter
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("greet-function")
+        function greet(name = 'Dear') {
+            console.log("Hello " + name + " !")
+        }
+        greet("pushpa")
+        greet("Shree")
+        greet()
+
+
+        console.log("sum-function")
+        function sum(a, b) {
+            return a + b;
+        }
+        console.log(sum(8, 9))
+        console.log(sum(10, 20))
+
+        console.log("Square-function")
+        function square(a) {
+            return a ** 2;
+        }
+        console.log(square(2))
+        console.log(square(15))
+
+        console.log("Average-function")
+        function avg(arr) {
+            let sum = 0;
+            for (i in arr) {
+                sum = sum + arr[i];
+            }
+            return sum / arr.length;
+        }
+        console.log(avg([1, 2, 3, 4, 5]));
+        console.log(avg([32, 45, 66, 32, 65]));
+
+        console.log("Temperature-Converter");
+        function convert(temp, scale) {
+            let result;
+            switch (scale) {
+                case "C":
+                    result = (temp - 32) * 5 / 9; // Fahrenheit → Celsius
+                    break;
+                case "F":
+                    result = (temp * 9 / 5) + 32; // Convert Celsius → Fahrenheit
+                    break;
+                default:
+                    result = "invalid scale";
+            }
+            return result;
+        }
+        console.log("100°F in Celsius =", convert(100, "C"));
+        console.log("0°C in Fahrenheit =", convert(0, "F"));
+        console.log("37°C in Fahrenheit =", convert(37, "F"));
+        console.log("212°F in Celsius =", convert(212, "C"));
+
+
+    </script>
+</body>
+
+</html>

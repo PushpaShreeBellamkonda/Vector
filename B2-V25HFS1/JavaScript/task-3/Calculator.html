@@ -1,0 +1,49 @@
+<!-- Task 5: Simple Calculator
+Scenario: You are developing a simple calculator that performs
+ basic arithmetic operations.
+
+Task:
+
+Assume variables num1 and num2 hold two numbers, and operator 
+holds the arithmetic operator as a string (e.g., “+”).
+Use a switch case statement to perform the operation
+ and store the result in a variable result.
+Print the result. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        let num1=Number(prompt("enter number 1"));
+        let num2=Number(prompt("enter number 2"));
+        let operator=prompt("enter the operator -> +,-,*,/,%");
+        let result;
+        switch (operator){
+            case '+':
+                result=num1+num2;
+                break;
+            case '-':
+                result=num1-num2;
+                break;
+            case '*':
+                result=num1*num2;
+                break;
+            case '/':
+                if (num2!==0){
+                    result=num1/num2;
+                }else{
+                    console.log("zero division error");
+                }
+                break;
+            default:
+                console.log("invalid operator")         
+        }
+        console.log("result is " + result)
+    </script>
+</body>
+</html>

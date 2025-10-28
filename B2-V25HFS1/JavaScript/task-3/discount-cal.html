@@ -1,0 +1,35 @@
+<!-- Task 3: Discount Calculator
+Scenario: Calculate the discount based on the total purchase amount.
+
+“No discount” if the amount is less than $50.
+“5% discount” if the amount is between $50 and $100.
+“10% discount” if the amount is between $101 and $200.
+“15% discount” if the amount is above $200.
+Task:
+
+Prompt the user to enter the total purchase amount.
+Display the discount percentage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+</head>
+<body>
+    <script>
+        let amount=Number(prompt("enter the purchase amount"));
+        if (amount<=50){
+            console.log("No discount")
+        }
+        else if(amount<=100){
+            console.log("your discount is 5% that is " +(amount*5)/100 + "rupees");
+        }else if (amount<=200){
+            console.log("your discount is 10% that is " +(amount*10)/100 + "rupees");
+        }else if (amount>=200){
+            console.log("your discount is 15% that is  " + (amount*15)/100 + "rupees");
+        }
+    </script>
+</body>
+</html>

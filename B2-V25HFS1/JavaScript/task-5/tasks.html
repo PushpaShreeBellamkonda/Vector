@@ -1,0 +1,50 @@
+<!-- 
+Task-1: reverse a string input: hello , output : olleh
+Task-2: find even numbers in an array - [23,54,67,64,46,95,98]
+Task-3: iterate an object values and keys using for of loop
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <script>
+        console.log("task-1");
+        var s = "hello";
+        var rev = "";
+        for (i = s.length - 1; i >= 0; i--) {
+            rev = rev + s[i];
+        }
+        console.log(rev);
+
+        console.log("task-2");
+        arr = [23, 54, 67, 64, 46, 95, 98];
+        for (i in arr) {
+            if (arr[i] % 2 == 0) {
+                console.log(arr[i]);
+            }
+        }
+
+        console.log("task-3");
+        obj = {
+            name: 'pushpa', age: 22, gender: 'f'
+        }
+        for (i of Object.values(obj)) {
+            console.log(i)
+        }
+        for (i of Object.keys(obj)) {
+            console.log(i)
+        }
+        for ([i,j] of Object.entries(obj)) {
+            console.log(i,j)
+        }
+    </script>
+</body>
+
+</html>

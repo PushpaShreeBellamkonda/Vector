@@ -1,0 +1,26 @@
+<!-- Task 2: Traffic Light Simulation
+Scenario: Simulate a traffic light system.
+
+“Stop” if the light is red.
+“Get Ready” if the light is yellow.
+“Go” if the light is green.
+Task:
+
+Prompt the user to enter the color of the traffic light.
+Display the corresponding action. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic-light Simulation</title>
+</head>
+<body>
+    <script>
+        let light=prompt("enter the color of light");
+        let action=(light=="red")? "Stop":(light=="yellow")? "Get Ready":(light=="green")? "Go":"invalid Color";
+        console.log(action)
+    </script>
+</body>
+</html>

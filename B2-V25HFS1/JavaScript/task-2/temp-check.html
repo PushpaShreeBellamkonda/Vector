@@ -1,0 +1,21 @@
+<!--  Temperature Check: Declare a variable temperature and 
+ use nested ternary operators to categorize it as "Hot" (above 30),
+  "Warm" (20-30), "Cool" (10-19), and "Cold" (below 10). 
+  Log the result.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature-check</title>
+ </head>
+ <body>
+    <script>
+        let temperature=prompt("enter the temperature");
+        let whether=(temperature>30)? "Hot":(temperature>=20)? "Warm":(temperature>=10)? "Cool": "Cold";
+        console.log(whether)
+    </script>
+ </body>
+ </html>
