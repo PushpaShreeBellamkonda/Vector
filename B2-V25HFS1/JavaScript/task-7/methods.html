@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods for accessing</title>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+    <h1>Heading 3</h1>
+
+    <span id="id1">Hello span 1</span>
+    <span id="id2">Hello span 2</span>
+
+    <div class="con1">Container 1</div>
+    <div class="con2">Container 2</div>
+
+    <script>
+        var el=document.getElementsByTagName('h1')
+        console.log(el)                              //gives whole collection
+        console.log(el[0])                           //gives 1st element
+
+        var ell=document.getElementById('id1')
+        console.log(ell)
+
+        var e=document.getElementsByClassName('con1')
+        console.log(e)
+        console.log(e[0])
+
+        var x=document.querySelector('h1')
+        console.log(x)                        //gives 1st h1 element
+        console.log(x[0])                     //undefined
+
+
+        var y=document.querySelector('#id1')
+        console.log(y)                        //gives 1st element with id=id1
+
+        var z=document.querySelector('.con1')
+        console.log(z)                       //gives 1st element with classname=con1
+
+
+        var x=document.querySelectorAll('h1')
+        console.log(x)                     //gives whole collection                      
+        console.log(x[0])                  //gives 1st h1 element
+
+        var y=document.querySelectorAll('#id1')
+        console.log(y)                        
+
+        var z=document.querySelectorAll('.con1')
+        console.log(z)  
+        console.log(z[0])   
+        
+        var s=document.getElementsByClassName('con1')  //to get the content inside a class
+        console.log(s[0].innerText)
+
+        var a=document.getElementById('id1')  //to get the content inside an id
+        console.log(a.innerText)
+
+        
+
+
+        
+    </script>
+</body>
+</html>
