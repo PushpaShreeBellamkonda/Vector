@@ -14,20 +14,25 @@
     <span id="id2">Hello span 2</span>
 
     <div class="con1">Container 1</div>
-    <div class="con2">Container 2</div>
+    <div class="con1">Container 2</div>
 
     <script>
+        // Methods for accessing
+        // 1.Based on tagname
         var el=document.getElementsByTagName('h1')
         console.log(el)                              //gives whole collection
         console.log(el[0])                           //gives 1st element
 
+        //Based on id
         var ell=document.getElementById('id1')
         console.log(ell)
 
+        //Based on classname
         var e=document.getElementsByClassName('con1')
         console.log(e)
         console.log(e[0])
 
+        // based on queryselector
         var x=document.querySelector('h1')
         console.log(x)                        //gives 1st h1 element
         console.log(x[0])                     //undefined
@@ -40,22 +45,40 @@
         console.log(z)                       //gives 1st element with classname=con1
 
 
-        var x=document.querySelectorAll('h1')
-        console.log(x)                     //gives whole collection                      
-        console.log(x[0])                  //gives 1st h1 element
+        //based on queryselectorall
+        var l=document.querySelectorAll('h1')
+        console.log(l)                     //gives whole collection                      
+        console.log(l[0])                  //gives 1st h1 element
 
-        var y=document.querySelectorAll('#id1')
-        console.log(y)                        
+        var m=document.querySelectorAll('#id1')
+        console.log(m)                        
 
-        var z=document.querySelectorAll('.con1')
-        console.log(z)  
-        console.log(z[0])   
+        var n=document.querySelectorAll('.con1')
+        console.log(n)  
+        console.log(n[0])   
         
+
+        //get element&content with class
         var s=document.getElementsByClassName('con1')  //to get the content inside a class
         console.log(s[0].innerText)
 
+        //get element&content with id
         var a=document.getElementById('id1')  //to get the content inside an id
         console.log(a.innerText)
+
+
+        //to modify content using classname and id
+        var s=document.getElementsByClassName('con1') 
+        s[0].innerHTML='<b> hello world </b>'
+
+        var a=document.getElementById('id1')
+        a.innerText="hello js"
+
+
+        //to add styling
+        
+
+
 
         
 

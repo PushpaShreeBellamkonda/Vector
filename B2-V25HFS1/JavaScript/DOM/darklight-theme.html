@@ -1,0 +1,40 @@
+<!-- when click on button body color is changed to black and white alternatively -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change-content-3</title>
+</head>
+
+<body>
+    <button onclick="darklight()">Click here</button>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti quaerat dolor ullam sint voluptate!
+        Repudiandae dolorum a, ea ut, blanditiis sapiente vitae dolorem quasi sequi doloribus, facere maxime atque.
+    </div>
+
+    <script>
+        flag = true;
+        function darklight() {
+            var el = document.querySelector('body')
+            var btn = document.querySelector('button')
+            if (flag) {
+                el.style.background = 'black';
+                el.style.color = 'white';
+                btn.innerText = 'Light Theme';
+                flag = false;
+            }
+            else {
+                el.style.background = 'white';
+                el.style.color = 'black';
+                btn.innerText = 'Dark Theme';
+                flag = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!--  Event handling: Write a script that adds a click event listener to a button that changes the text of a paragraph when clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handling</title>
+</head>
+<body>
+    <div id="p1">Paragraph before clicking the button</div>
+    <button onclick="fun()">Click</button>
+    <script>
+        function fun(){
+        var x=document.getElementById('p1');
+        x.innerText='Paragraph after clicking the button';
+        } 
+    </script>
+</body>
+</html>
+
+
+<!-- by using event listener -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handling</title>
+</head>
+<body>
+    <div id="p1">Paragraph before clicking the button</div>
+    <button id="btn">Click</button>
+
+    <script>
+        // Add event listener to the button
+        document.getElementById('btn').addEventListener('click', function() {
+            var x = document.getElementById('p1');
+            x.innerText = 'Paragraph after clicking the button';
+        });
+    </script>
+</body>
+</html> -->

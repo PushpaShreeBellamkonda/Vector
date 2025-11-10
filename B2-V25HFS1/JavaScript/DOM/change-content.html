@@ -1,0 +1,24 @@
+<!-- when user clicks on click1 content changes from hello world to hello python and vice versa-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change-content-js</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button onclick="fun(0,'hello Python')">Click1</button>
+    <h1>Hello world</h1>
+    <button onclick="fun(1,'hello java')">Click2</button>
+    <h1>Hello world</h1>
+    <button onclick="fun(2,'hello cpp')">Click3</button>
+    <script>
+        function fun(n,m){
+            var el=document.querySelectorAll('h1')
+            el[n].innerText=m
+        }
+    </script>
+</body>
+</html>

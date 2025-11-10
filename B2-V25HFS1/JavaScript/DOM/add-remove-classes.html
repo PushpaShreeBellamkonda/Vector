@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add and Remove Classes Example</title>
+  <style>
+    .demo {
+      color: white;
+      background: blue;
+      padding: 10px;
+    }
+    .demo1 {
+      font-family: cursive;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <button onclick="fun()">Add Classes</button>
+  <button onclick="rem()">Remove Class</button>
+
+  <script>
+    var header = document.querySelector('h1');
+
+    function fun() {
+      header.classList.add('demo');
+      header.classList.add('demo1');
+      console.log(header);
+    }
+
+    function rem() {
+      header.classList.remove('demo');
+      console.log(header);
+    }
+  </script>
+</body>
+</html>

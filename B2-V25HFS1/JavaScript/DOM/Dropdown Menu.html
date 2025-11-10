@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Toggle Example</title>
+    <style>
+        .m {
+            width: 30px;
+            height: 8px;
+            background: black;
+            margin: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .dropdown {
+            background: lightpink;
+            width: 200px;
+            display: none;
+            position: absolute;
+            top: 100%;      /* Positions dropdown below container */
+            right: 10px;
+            padding: 10px;
+        }
+
+        .elhide {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Content is Added</h1>
+        <button onclick="fun()">
+            <div>
+                <div class="m"></div>
+                <div class="m"></div>
+                <div class="m"></div>
+            </div>
+        </button>
+
+        <div class="dropdown">
+            <div>Home</div>
+            <div>About</div>
+            <div>Services</div>
+     9   </div>
+
+    </div>
+
+    <script>
+        function fun() {
+            var el = document.querySelector('.dropdown');
+            el.classList.toggle('elhide');
+        }
+    </script>
+</body>
+
+</html>

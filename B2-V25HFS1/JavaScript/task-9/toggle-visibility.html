@@ -1,0 +1,28 @@
+<!-- Toggle visibility: Create a button that toggles the visibility of an element by showing/hiding it on each click. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility</title>
+    <style>
+        .tog {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>An example division</div>
+    <button onclick="fun()">Click</button>
+    <script>
+        function fun() {
+            var x = document.querySelector('div');
+            x.classList.toggle('tog')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sccess-content-js</title>
+<style>
+    .tag1{
+        background-color: burlywood;
+        height: 50px;
+        width: 100px;
+    }
+</style>
+</head>
+<body>
+    <div class="con1">Container-1</div>
+    <div id="id1">id-1</div>
+    <h3>change color</h3>
+    <h4>setting an attribute</h4>
+    <h1>Change content</h1>
+    <button onclick="fun()">Click here</button>
+    <script>
+
+        //get element&content with class
+        var s=document.getElementsByClassName('con1')  //to get the content inside a class
+        console.log(s[0].innerText)
+
+        //get element&content with id
+        var a=document.getElementById('id1')  //to get the content inside an id
+        console.log(a.innerText)
+
+
+        //to modify content using classname and id
+        var s=document.getElementsByClassName('con1') 
+        s[0].innerHTML='<b> hello world </b>'
+
+        var a=document.getElementById('id1')
+        a.innerText="hello js"
+
+        //to add styling
+        var el=document.getElementsByTagName('h3')
+        el[0].style.color="red";
+        el[0].style.backgroundColor='pink';
+
+        //to set attribute
+        var el=document.getElementsByTagName('h4')
+        el[0].setAttribute('class','tag1')
+
+        //to change content
+        function fun(){
+            var el=document.querySelector('h1');
+            el.innerText="yes content is changed";
+        }
+    </script>
+</body>
+</html>

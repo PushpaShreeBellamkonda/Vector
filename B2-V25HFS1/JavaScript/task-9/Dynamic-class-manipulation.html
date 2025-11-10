@@ -1,0 +1,26 @@
+<!--  Dynamic class manipulation: Write a function that adds or removes a class from an element when a button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic class manipulation</title>
+    <style>
+        .div1{
+            background-color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fun()">Click</button>
+    <div>division 1</div>
+    <script>
+        function fun(){
+            var x=document.querySelector('div')
+            x.classList.toggle('div1')
+        }
+    </script>
+</body>
+</html>

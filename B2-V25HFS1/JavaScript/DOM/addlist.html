@@ -1,0 +1,23 @@
+<!-- when user click on button it asks to enter name of listitem and a listitem is created with that name -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add list</title>
+</head>
+<body>
+    <button onclick="addlist()">Click</button>
+    <ul></ul>
+    <script>
+        function addlist(){
+            var ip=prompt("enter a list name");
+            var ul=document.querySelector('ul');
+            var litem=document.createElement('li');
+            litem.innerText=ip;
+            ul.append(litem);
+        }
+    </script>
+</body>
+</html>

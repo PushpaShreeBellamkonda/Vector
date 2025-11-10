@@ -1,0 +1,42 @@
+<!-- when user click on theme1 container color changes to blueviolet and vice versa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changeing content</title>
+    <style>
+        #demo1{
+            background-color: blueviolet;
+        }
+        #demo2{
+            background-color: orangered;
+        }
+        #demo3{
+            background-color: pink;
+        }       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><h1>Branding</h1></div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <button onclick="fun('demo1')">Theme1</button>
+    <button onclick="fun('demo2')">Theme2</button>
+    <button onclick="fun('demo3')">Theme3</button>
+
+    <script>
+        function fun(n){
+            var el=document.querySelector('.container')
+            el.setAttribute('id',n)
+            console.log(el)
+        }
+    </script>
+</body>
+</html>

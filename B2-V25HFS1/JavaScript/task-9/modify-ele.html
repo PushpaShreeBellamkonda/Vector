@@ -1,0 +1,21 @@
+<!-- Modify element attributes: Select an image element and change its src and alt attributes. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify-element</title>
+ </head>
+ <body>
+    <img id="myimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wxJ0c-jC6VcDASO9aiDWD9zWAeJLKrS5gg&s" alt="first image">
+    <button onclick="imgchange()">click</button>
+    <script>
+        function imgchange(){
+            var x=document.getElementById('myimg')
+            x.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrUb_SAqHuPx57Y-keP9dzAHNtoCo54OpRxQ&s';
+            x.alt='second image';
+            console.log("images is updated")
+        }
+    </script>
+ </body>
+ </html>

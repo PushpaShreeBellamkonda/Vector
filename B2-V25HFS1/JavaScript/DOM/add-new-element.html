@@ -1,0 +1,33 @@
+<!-- adding content through Javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new element</title>
+</head>
+<body>
+    <script>
+
+        // creating ul and li items
+        var ul=document.createElement('ul')
+        var li1=document.createElement('li')
+        var li2=document.createElement('li')
+        var li3=document.createElement('li')
+
+        //writing content inside li items
+        li1.innerText="content1 added through JS DOM"
+        li2.innerText="content2 added through JS DOM"
+        li3.innerText="content3 added through JS DOM"
+
+        //appending li items to ul
+        ul.append(li1,li2,li3)
+
+        //appending ul to the body
+        document.body.append(ul)
+
+        console.log(ul)
+    </script>
+</body>
+</html>

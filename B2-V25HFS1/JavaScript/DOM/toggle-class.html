@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Class Example</title>
+  <style>
+    .dropdown {
+      background: lightpink;
+      width: 200px;
+      display: none;
+      padding: 10px;
+    }
+    .elhide {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="fun()">Toggle Menu</button>
+  <div class="dropdown">
+    <div>Home</div>
+    <div>About</div>
+    <div>Services</div>
+  </div>
+
+  <script>
+    function fun() {
+      var el = document.querySelector('.dropdown');
+      el.classList.toggle('elhide');   //If el does not have the class elhide, add it. If it already has it, remove it.
+    }
+  </script>
+</body>
+</html>

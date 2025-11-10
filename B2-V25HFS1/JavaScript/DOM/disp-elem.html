@@ -1,0 +1,38 @@
+<!-- how to display elemnets of an array using loops -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display elements of array and object</title>
+ </head>
+ <body>
+    <script>
+        //array
+        var arr=["html","css","js"]
+        var ul=document.createElement('ul')
+        for (var i of arr){
+            var li=document.createElement('li')
+            li.innerText=i
+            ul.append(li)
+        }
+        console.log(ul)
+        document.body.append(ul)
+
+        // object
+        var obj={
+            name:"pushpa",
+            age:21,
+            city:"hyd"
+        }
+        var parent=document.createElement('div')
+        for (var i in obj){
+            var child=document.createElement('div')
+            child.innerText= i + "-" + obj[i]
+            parent.append(child)
+        }
+        console.log(parent)
+        document.body.append(parent)
+    </script>
+ </body>
+ </html>
