@@ -1,0 +1,65 @@
+<!-- Task 1: Using concat
+Objective: Merge two or more arrays.
+Task: Create two arrays, one with your favorite sports and one with your favorite hobbies. Use the concat method to merge them into a single array.
+Expected Output: Display the merged array.
+
+Task 2: Using splice
+Objective: Modify an array by adding, removing, or replacing elements.
+Task: Create an array of numbers from 1 to 10. Use the splice method to remove the numbers 4, 5, and 6, and replace them with the numbers 40, 50, and 60.
+Expected Output: Display the array before and after the splice operation.
+
+Task 3: Using slice
+Objective: Extract a portion of an array without modifying the original array.
+Task: Create an array of the days of the week. Use the slice method to create a new array that contains only the weekdays.
+Expected Output: Display the original array and the new array.
+
+Task 4: Using join
+Objective: Convert an array to a string.
+Task: Create an array of words that form a sentence. Use the join method to combine them into a single string with spaces between each word.
+Expected Output: Display the resulting sentence.
+
+Task 5: Using sort
+Objective: Sort the elements of an array.
+Task: Create an array of random numbers. Use the sort method to sort the numbers in ascending order.
+Expected Output: Display the sorted array.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        let sports=['cricket','hockey','badmanton','chess']
+        let hobbies=['scrolling','scrolling','scrolling']
+        console.log(sports.concat(hobbies))
+        // 2
+        let arr=[1,2,3,4,5,6,7,8,9,10]
+        arr.splice(3,3)
+        console.log(arr)
+        arr.splice(3,0,40,50,60)
+        console.log(arr)
+        // 3
+        let days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+        console.log(days)
+        console.log(days.slice(0,5))
+        // 4
+        let str=['you','are','working','on','js']
+        console.log(str.join(" "))
+        console.log(str.join("-"))
+        // 5
+        let a=[3,5,71,23,54,97,12,43]
+        a.sort((x,y)=>x-y)
+        console.log(a)
+        a.sort((x,y)=>y-x)
+        console.log(a)
+
+
+
+    </script>
+</body>
+</html>

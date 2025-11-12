@@ -1,0 +1,33 @@
+<!-- 4)Remove elements from an array
+Remove the first and last elements from the array.
+5)Reverse an array using for loop 
+hints 
+use push method  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove and Reverse</title>
+</head>
+<body>
+    <script>
+        let arr=[4,6,7,9,2,5,1]
+        // delete 1st and last element
+        for (var i in arr){
+            if(i==0 || i==arr.length-1){
+                delete arr[i]
+            }
+        }
+        console.log(arr)
+
+        //reverse array
+        let rev=[];
+        for (var i=arr.length-1;i>=0;i--){
+                rev.push(arr[i])
+        }
+        console.log(rev)
+    </script>
+</body>
+</html>
