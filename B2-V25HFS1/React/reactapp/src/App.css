@@ -1,8 +1,25 @@
-/* *{
+*{
 margin: 0px;
 padding: 0px;
 }
 
-h1,p{
-  color: pink;
-} */
+.dora{
+  border-radius: 1rem;
+  margin: 30px;
+  background-color: grey;
+  height: 350px;
+  width: 300px;
+}
+
+img{
+  border-radius: 1rem;
+  margin: 30px;
+  height: 200px;
+  width: 150px;
+}
+p{
+  padding-left: 30px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: black;
+}
