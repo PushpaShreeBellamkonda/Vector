@@ -1,0 +1,26 @@
+<!-- Simple Counter -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple-Counter</title>
+ </head>
+ <body>
+    <button onclick="inc()">Increment</button>
+    <input type="text" name="input" id="inp1" placeholder="enter text"/>
+    <button onclick="dec()">Decrement</button>
+     <script>
+    function inc(){
+        let inc=document.querySelector('input')
+        // inc.value+=1 this inc.value will be a string so convert it to number
+        inc.value=Number(inc.value)+1
+    }
+    function dec(){
+        let dec=document.querySelector('input')
+        // dec.value-=1
+        dec.value=Number(dec.value)-1
+    }
+ </script>
+ </body>
+ </html>

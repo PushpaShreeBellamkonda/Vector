@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather App</title>
+    <style>
+        input{
+            margin-left: 25%;
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            border-radius: 1rem;
+            border: transparent;
+            background-color: pink;
+            color: grey;
+            font-size: x-large;
+        }
+        button{
+            height: 20px;
+            width: 70px;
+            text-align: center;
+            border-radius: 0.5rem;
+            background-color: pink;
+            color:grey;
+            border: transparent;
+        }
+        .box{
+            height: 100px;
+            width: 25%;
+            background-color:palevioletred;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+            margin-top: 50px;
+            margin-left: 25%;
+            border-radius: 3rem;
+        }
+        h3{
+            background-color:pink;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: grey;
+            margin-top: 50px;
+            margin-left: 25%;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="input" id="inp1" placeholder="enter city">
+    <button onclick="wheatherapp()">SEARCH</button>
+    <div> <h3>KNOW YOUR CITY'S TEMPERATURE 👇 </h3></div>
+    <script>
+        async function wheatherapp(){
+            let inp=document.querySelector('input')
+            let r=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inp.value}&units=metric&appid=466ddaa21a8de191e9f608bd11a56acb`)
+            let data=await r.json()
+            console.log(data.main.temp)
+            var div=document.createElement('div')
+            div.classList.add('box')
+            div.innerText=`temperature at ${inp.value} is ${data.main.temp} 🌡️`
+            document.body.append(div)
+        }
+        // wheatherapp()
+    </script>
+</body>
+</html>

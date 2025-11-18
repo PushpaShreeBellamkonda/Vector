@@ -1,0 +1,64 @@
+<!-- To-Do-List -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <style>
+            body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    li {
+      margin-top: 10px;
+      list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>My To-Do-List</h2>
+    <input type="text" id="inp1" placeholder="enter text">
+    <button onclick="add()">ADD</button>
+    <ul id="addlist"></ul>
+    <script>
+        function add() {
+            var ul = document.querySelector('ul')
+            var inp = document.querySelector('input')
+            console.log(inp.value)
+            var li = document.createElement('li')
+
+            var add = document.createElement('span')
+            add.innerText = inp.value
+
+            btn1 = document.createElement('button')
+            btn1.innerText = 'UPDATE'
+            btn1.addEventListener('click', () => {
+                var item = prompt("add new item")
+                add.innerText = item
+            })
+
+            btn2 = document.createElement('button')
+            btn2.innerText = "REMOVE"
+            btn2.addEventListener('click', () => {
+                li.remove()
+            })
+            li.append(add, btn1, btn2)
+            console.log(li)
+            ul.append(li)
+        }
+    </script>
+</body>
+
+</html>

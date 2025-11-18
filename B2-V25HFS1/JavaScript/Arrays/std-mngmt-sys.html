@@ -1,0 +1,88 @@
+<!-- Student Management System 
+  1. Add Student
+  2. View All Students
+  3. Update Student
+  4. Delete Student
+  5. Search Student
+  6. Sort Students
+  7. Reverse List
+  8. Exit
+  Enter your choice (1-8):  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+</head>
+
+<body>
+  <script>
+
+    let std = []
+    flag = true
+    while (flag) {
+      let input = prompt("1. Add Student 2. View All Students 3. Update Student 4. Delete Student 5. Search Student 6. Sort Students 7. Reverse List 8")
+      switch (input) {
+        case '1':
+          let name = prompt('enter student name')
+          std.push(name)
+          break;
+
+        case '2':
+          console.log(std)
+          break;
+
+        case '3':
+          let student = prompt("enter student name to update")
+          let newind = std.indexOf(student)
+          if (newind == -1) {
+            console.log("student not found")
+          } else {
+            let newname = prompt("enter the new name")
+            std.splice(newind, 1, newname)
+            console.log('updated')
+          }
+          break;
+
+        case '4':
+          let delstd = prompt("enter student to deleet")
+          let delind = std.indexOf(delstd)
+          if (delind == -1) {
+            console.log("student not found")
+          } else {
+            std.splice(delind, 1)
+          }
+          break;
+
+        case '5':
+          let searstud = prompt("enter a student to search")
+          let searind = std.indexOf(searstud)
+          if (searind == -1) {
+            prompt(searstud, " not found")
+          } else {
+            console.log(searstud, " found at position", searind)
+          }
+          break;
+
+        case '6':
+          std.sort()
+          console.log("students are sorted")
+          break;
+        case '7':
+          std.reverse()
+          console.log("students are reversed")
+          break;
+        
+        case '8':
+          flag=false
+          console.log("operation exited")
+          break;
+      }
+    }
+
+  </script>
+</body>
+
+</html>
