@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-left: 5px;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+
+        li {
+            margin-top: 10px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- this form is for submit -->
+    <form action="">
+        <input type="text" placeholder="name">
+        <button>submit</button>
+    </form>
+
+    <!-- this is for change -->
+    <!-- it also includes input field from form tag -->
+    <input type='color' placeholder="enter">
+
+    <script>
+        // submit
+        let form = document.querySelector('form')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            console.log(e.target[0].value)
+        })
+
+        // change
+        var select = document.querySelector('input')
+        select.addEventListener("change", () => {
+            document.body.style.background = select.value
+        })
+
+        //focus
+        select.addEventListener('focus', () => {
+            select.style.background = 'yellow'
+        })
+
+        // blur
+        select.addEventListener('blur', () => {
+            alert(' lost focus')
+            document.body.style.background = 'lightblue'
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

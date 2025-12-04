@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        let btn=document.createElement('button')
+        btn.innerText='button'
+        let d=document.createElement('div')
+        btn.addEventListener('click',fun)
+        function fun(){
+            alert('button is clicked')
+        }
+        document.body.append(btn,d)
+    </script>
+</body>
+</html>

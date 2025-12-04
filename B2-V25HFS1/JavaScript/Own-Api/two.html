@@ -1,0 +1,111 @@
+<!--    json-server --watch db.json   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own-Api</title>
+    <style>
+        .main{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .con{
+            background-color: pink;
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="getdata()">GetData</button>
+    <button onclick="postdata()">PostData</button>
+    <button onclick="putdata()">PutData</button>
+    <button onclick="patchdata()">PatchData</button>
+    <button onclick="deldata()">DelData</button>
+
+    <script>
+        
+        // getdata
+        async function getdata(){
+
+            let data=await fetch('http://localhost:3000/students')
+            let res=await data.json()
+            console.log(res)
+            let main=document.createElement('div')
+            main.classList.add('main')
+            document.body.append(main)
+            
+            res.forEach((student)=>{
+
+                    var container=document.createElement('div')
+                    container.classList.add('con')
+                    var id=document.createElement('h3')
+                    var name=document.createElement('h3')
+                    var marks=document.createElement('h3')
+                    
+                    id.innerText="ID: "+student.id
+                    name.innerText="NAME: "+student.name
+                    marks.innerText="MARKS: "+student.marks
+
+                    container.append(id,name,marks)
+                    main.append(container)
+            })
+
+        }
+
+        // post data
+
+        async function postdata(){
+            let obj={name:"ravi","marks":91}
+            let data=await fetch('http://localhost:3000/students',{
+                method:'POST',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify(obj)
+            })
+        }
+
+        // put data
+            async function putdata(){
+            let obj={course:'js'}
+            let inp=prompt('enter id to put')
+            let data=await fetch(`http://localhost:3000/students/${inp}`,{
+                method:'PUT',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify(obj)
+            })
+        }
+        // patch data
+            async function patchdata(){
+            let obj={course:'js'}
+            let inp=prompt('enter id to patch')
+            let data=await fetch(`http://localhost:3000/students/${inp}`,{
+                method:'PATCH',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify(obj)
+            })
+        }
+
+        // delete data
+        async function deldata(){
+            let inp=prompt('enter id to delete')
+            let data=await fetch(`http://localhost:3000/students/${inp}`,
+            {
+                method:'DELETE'
+            })
+
+        }
+    </script>
+</body>
+</html>

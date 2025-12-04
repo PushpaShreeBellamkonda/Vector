@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events</title>
+</head>
+<body>
+        <script>
+            // 1 load
+            window.addEventListener('load',()=>{
+                alert('welcome')
+            })
+
+            // 2 resize
+
+            window.addEventListener('resize',()=>{
+                console.log(window.innerWidth)
+                if(window.innerWidth<400){
+                    document.body.style.background='pink'
+                }
+                if(window.innerWidth>400){
+                    document.body.style.background='purple'
+                }
+            })
+
+            // 3 scroll
+            window.addEventListener('scroll',()=>{
+                console.log(window.scrollY)
+                if (window.scrollY>500){
+                    document.body.style.background='pink'
+                }
+            })
+
+        </script>
+</body>
+</html>

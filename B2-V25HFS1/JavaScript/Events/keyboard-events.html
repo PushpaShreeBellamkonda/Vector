@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Board Events</title>
+</head>
+<body>
+    <form action="">
+        <div>
+        <input type="text" placeholder="enter name">
+        <input type="text" placeholder="enter name">
+        <button>Add </button>
+        <p class="para"></p>
+        </div>
+    </form>
+     <script>
+        // 1.keypress --when we click enter, we get the alert
+        document.addEventListener('keypress',function(e){
+            console.log(e.key)
+            if (e.key=='Enter'){
+                alert('enter clicked')
+            }
+        })
+        // keydown --how to disable developer options
+        document.addEventListener('keydown',function(e){
+            console.log(e.key)
+            if (e.key=='F12'){
+                e.preventDefault()
+            }
+            if(e.shiftKey && e.ctrlKey && (e.key=='J' || e.key=='I')){
+                alert('developer options disabled')
+                e.preventDefault()
+            }
+        })
+
+        // how to disable right click
+        document.addEventListener('contextmenu',(e)=>{
+            e.preventDefault()
+            alert('you cant right click')
+        })
+
+        // when user types on input field that displays below in a para
+        var inp=document.querySelector('input')
+        var text=document.querySelector('.para')
+        inp.addEventListener('keypress',function(e){
+            text.innerText=e.target.value
+        })
+
+     </script>
+</body>
+</html>

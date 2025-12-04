@@ -1,0 +1,44 @@
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* Navbar styles */
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  gap: 20px; /* space between links */
+  padding: 12px 24px;
+  background: #111; /* dark navbar */
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.dig{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.stp{
+    position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tbl{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}

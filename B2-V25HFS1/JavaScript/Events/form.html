@@ -1,0 +1,49 @@
+<!-- how to access input from a form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access ip in a form</title>
+</head>
+<body>
+<form action="">
+    <input type="text" name="firstName" placeholder="enter name">
+    <input type="text" name="lastName" placeholder="enter name">
+    <button>add</button>
+</form>
+<script>
+    
+    let form=document.querySelector('form')
+    form.addEventListener('submit',fun)
+    // m-1 using field names
+    function fun(e){
+            e.preventDefault()
+            // console.log(document.forms[0][0].value)
+            // console.log(document.forms[0][1].value)
+            
+            // m-1.1 without indexing
+            // console.log(form.firstName.value)
+            // console.log(form.lastName.value)
+    }
+
+    // m-2 using target
+    function fun(e){
+        e.preventDefault()
+        // console.log(e.target[0].value)
+        // console.log(e.target[1].value)
+    }
+
+    // m-3 using methods
+
+    function fun(e){
+        e.preventDefault()
+        var el=document.getElementsByTagName('input')
+        console.log(el[0].value)
+        console.log(el[1].value)
+    }
+
+</script>
+
+</body>
+</html>
