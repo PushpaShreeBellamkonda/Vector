@@ -1,0 +1,26 @@
+// get methods
+var d=new Date()
+console.log(d)
+console.log(d.getFullYear())
+console.log(d.getMonth()+1)
+let months=['jan','feb','march','april','may','june','july','aug','sep','oct','nov','dec']
+console.log(months[d.getMonth()])
+console.log(d.getDay())
+console.log(d.getDate())
+console.log(d.getHours())
+console.log(d.getMinutes())
+console.log(d.getSeconds())
+console.log(d.toDateString())
+console.log(d.toLocaleDateString())
+console.log(d.toTimeString())
+console.log(d.toLocaleTimeString())
+
+// set methods
+var olddate=new Date()
+olddate.setFullYear(2000)
+olddate.setDate(23)
+olddate.setMonth(1)
+olddate.setHours(2)
+olddate.setMinutes(12)
+olddate.setSeconds(34)
+console.log(olddate)

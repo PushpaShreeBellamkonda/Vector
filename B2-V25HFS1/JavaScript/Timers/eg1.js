@@ -1,0 +1,9 @@
+c=0
+a=setInterval(()=>{
+    console.log('hello')
+    console.log('hii')
+    c++
+    if(c==5){
+        clearInterval(a)
+    }
+},1000)

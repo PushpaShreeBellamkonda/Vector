@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Objects</title>
+</head>
+<body>
+    <button onclick="fun()">Close Window</button>
+    <button onclick="openWin()">Open Window</button>
+    <script>
+        // 1.window.prompt()
+        // 2.window.alert()
+        // 3.window.confirm('are you sure to exit')
+        // 4.how to close and open window
+        let x;
+
+        function openWin() {
+            x = window.open(
+                'https://www.programiz.com',
+                '_blank',
+                'width=300,height=300'
+            );
+        }
+        function fun() {
+            if (window.confirm('Sure to exit?')) {
+                x.close();
+            }
+        }
+        
+    </script>
+</body> 
+</html>

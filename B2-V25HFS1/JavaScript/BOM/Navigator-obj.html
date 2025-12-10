@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator object</title>
+</head>
+<body>
+    <script>
+        // 1
+        if(navigator.onLine){
+            console.log("user online")
+        }
+        else{
+            console.log("user offline")
+        }
+        
+        // 2
+        console.log(navigator.geolocation.getCurrentPosition((position)=>{
+            console.log(position.coords.latitude)
+            console.log(position.coords.longitude)
+        }))
+    </script>
+</body>
+</html>

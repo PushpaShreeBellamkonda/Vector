@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <input type="date" placeholder="date">
+    <button onclick="calc()">Calculate</button>
+    <div class="date"></div>
+    <div class="day"></div>
+
+    <script>
+        let inp=document.querySelector('input')
+        function calc(){
+            console.log(inp.value)
+            let olddate=new Date(inp.value)
+            let curdate=new Date()
+            let date=document.querySelector('.date')
+            day=document.querySelector('.day')
+            date.innerText=curdate.getFullYear()-olddate.getFullYear()
+            day.innerText=Math.round((curdate-olddate)/(24*60*60*1000))
+        }
+    </script>
+</body>
+</html>
